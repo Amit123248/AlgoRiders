@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    th,td{
+        border: 2px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    tr:nth-child(even) {
+        background-color: gray;
+    }
+</style>
+<body>
+    {% for i in student %}
+    {{i.id}}
+    {{i.name}}
+    {{i.email}}
+    {% endfor %}
+
+    <table>
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                name
+            </th>
+            <th>
+                email
+            </th>
+        </tr>
+        {% for i in student %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
